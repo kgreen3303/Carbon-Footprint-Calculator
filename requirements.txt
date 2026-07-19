@@ -3,4 +3,4 @@ numpy
 matplotlib
 scikit-learn
 sympy
-matplotlib-fonttools>=4.0.0
+
