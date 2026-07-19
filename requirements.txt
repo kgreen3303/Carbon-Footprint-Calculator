@@ -3,4 +3,4 @@ numpy
 matplotlib
 scikit-learn
 sympy
-koreanize-matplotlib
+koreanize-matplotlib==0.1.1
