@@ -1,6 +1,0 @@
-streamlit
-numpy
-matplotlib
-scikit-learn
-sympy
-koreanize-matplotlib==0.1.1
