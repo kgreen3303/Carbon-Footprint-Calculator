@@ -5,9 +5,8 @@ from matplotlib import rc
 import streamlit as st
 from sympy import Integral, Symbol, pi, exp, sqrt
 
-font_path = 'NanumGothic.ttf'
-plt.rcParams['font.family'] = 'NanumGothic'
-
+rc('font', family='NanumGothic')
+plt.rcParams['axes.unicode_minus'] = False
 
 def calculate_carbon_footprint(platform, minutes):
     # 소셜 미디어별 탄소 배출량 (g CO2 / 분)
