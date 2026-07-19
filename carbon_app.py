@@ -1,12 +1,15 @@
 import numpy as np
 from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
-from matplotlib import rc
+import matplotlib.font_manager as fm
 import streamlit as st
 from sympy import Integral, Symbol, pi, exp, sqrt
 
-rc('font', family='NanumGothic')
-plt.rcParams['axes.unicode_minus'] = False
+font_path = "fonts/NanumGothic.ttf"
+fm.fontManager.addfont(font_path)
+font_name = fm.FontProperties(fname=font_path).get_name()
+plt.rcParams["font.family"] = font_name
+plt.rcParams["axes.unicode_minus"] = False
 
 def calculate_carbon_footprint(platform, minutes):
     # 소셜 미디어별 탄소 배출량 (g CO2 / 분)
