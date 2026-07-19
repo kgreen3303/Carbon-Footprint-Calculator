@@ -6,6 +6,7 @@ import streamlit as st
 from sympy import Integral, Symbol, pi, exp, sqrt
 
 rc('font', family = 'Malgun Gothic')
+plt.rcParams['axes.unicode_minus'] = False
 
 def calculate_carbon_footprint(platform, minutes):
     # 소셜 미디어별 탄소 배출량 (g CO2 / 분)
