@@ -373,14 +373,14 @@ else:
   st.write('입력된 탄소 배출 데이터가 없어 그래프를 생성하지 못했습니다.')
 
 
-st.subheader('<일별 탄소 배출량 추이 및 내일 예측>')
+st.subheader('<일별 탄소 배출량 추이 및 다음 날 예측>')
 plt.figure(figsize = (10, 5))
 plt.plot(days, emissions, marker = 'o', color = 'dodgerblue', linewidth = 2, label = '실제 일별 배출량')
 plt.axhline(y = daily_goal, color = 'red', linestyle = '--', linewidth = 2, label = '일별 목표량')
 
 if 'final_pred' in locals() and mode > 1:
   next_day = mode + 1
-  plt.scatter([next_day], [final_pred], color = 'green', marker = '*', s = 200, zorder = 5, label = '내일 예측치')
+  plt.scatter([next_day], [final_pred], color = 'green', marker = '*', s = 200, zorder = 5, label = '다음 날 예측치')
   plt.plot([mode, next_day], [emissions[-1], final_pred], color = 'green', linestyle = ':')
 
 if 'pred_history' in locals() and len(pred_history) > 0:
@@ -391,7 +391,7 @@ if 'pred_history' in locals() and len(pred_history) > 0:
     plt.scatter([], [], color='orange', marker='*', s=100, label='전날 예측했던 양')
 
 plt.xticks(range(1, mode + 1, 1))
-plt.title('일별 탄소 배출량 추이 및 내일 예측', fontsize=14, fontweight='bold')
+plt.title('일별 탄소 배출량 추이 및 다음 날 예측', fontsize=14, fontweight='bold')
 plt.xlabel('날짜 (Day)', fontsize=12)
 plt.ylabel('탄소 배출량 (kg CO2)', fontsize=12)
 plt.legend(loc='upper left')
