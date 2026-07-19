@@ -202,7 +202,7 @@ for i in range (1, mode+1, 1):
         total_points += points
 
         achieve = total_emission / goal * 100
-    # ---추가---
+
         st.progress(min(achieve / 100, 1.0))
 
         st.write("오늘의 탄소배출량: ", round(daily_emission, 2), "kg CO2")
