@@ -5,7 +5,8 @@ from matplotlib import rc
 import streamlit as st
 from sympy import Integral, Symbol, pi, exp, sqrt
 
-plt.rcParams['font.family'] = 'Malgun Gothic'
+font_path = 'NanumGothic.ttf'
+plt.rcParams['font.family'] = 'NanumGothic'
 
 
 def calculate_carbon_footprint(platform, minutes):
